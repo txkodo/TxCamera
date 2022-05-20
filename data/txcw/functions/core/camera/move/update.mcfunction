@@ -19,5 +19,5 @@ scoreboard players operation $t txcw = $t_ txcw
 
 # パラメータが1000以上(区間外)で次のセグメントが存在している場合、次のセグメントに移動
 data modify storage txcw:core next set value 1b
-execute store success storage txcw:core next byte 0 if score $t txcw matches 1000.. unless data storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].knots[2]
-execute if score $t txcw matches 1000.. if data storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].knots[2] run function txcw:core/camera/move/next
+execute store success storage txcw:core next byte 0 if score $t txcw matches 1000.. unless data storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.knots[2]
+execute if score $t txcw matches 1000.. if data storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.knots[2] run function txcw:core/camera/move/next

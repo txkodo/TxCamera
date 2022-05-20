@@ -1,4 +1,5 @@
-function txcw:core/thread/release/
+# テストプレイ時はデータを消さない
+execute if entity @s[tag=!txcw.anchor.test] run function txcw:core/thread/release/
 
 kill @s
 
@@ -12,4 +13,8 @@ tag @a[tag=txcw.active] remove txcw.creative
 tag @a[tag=txcw.active] remove txcw.adventure
 tag @a[tag=txcw.active] remove txcw.spectator
 
-scoreboard players reset @e[tag=txcw.active] txcw.id
+# テストプレイ時はスコアを消さない
+execute if entity @s[tag=!txcw.anchor.test] run scoreboard players reset @e[tag=txcw.active] txcw.id
+
+# 再生中タグの削除
+tag @e[tag=txcw.active] remove txcw.camera_

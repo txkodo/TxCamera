@@ -1,7 +1,7 @@
 # 次のセグメントに移動
 
 # 制御点情報を更新
-data remove storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].knots[0]
+data remove storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.knots[0]
 function txcw:core/camera/move/load
 
 scoreboard players remove $t txcw 1000

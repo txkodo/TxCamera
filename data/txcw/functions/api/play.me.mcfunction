@@ -1,2 +1,2 @@
 tag @s add txcw.camera
-function txcw:core/camera/record
+function txcw:core/camera/play

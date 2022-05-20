@@ -10,17 +10,17 @@ tag @e[scores={txcw.id=0}] add txcw.active
 scoreboard players operation @e[scores={txcw.id=-2147483648..2147483647}] txcw.id += $ txcw.id
 
 # ストレージからパラメータを取得
-execute store result score $t txcw run data get storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].t
+execute store result score $t txcw run data get storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.t
 
 # ストレージから移動距離を取得
-execute store result score $span txcw run data get storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].speed
+execute store result score $span txcw run data get storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.speed
 
 # 制御点とパラメータを更新
-data modify storage txcw:core bezier.3d set from storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].pos
+data modify storage txcw:core bezier.3d set from storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.pos
 function txcw:core/camera/move/update
 
 # ストレージにパラメータを保存
-execute store result storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].t int 1 run scoreboard players get $t txcw
+execute store result storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.t int 1 run scoreboard players get $t txcw
 
 # 移動
 execute if data storage txcw:core {next:1b} run function txcw:core/camera/move/tp
