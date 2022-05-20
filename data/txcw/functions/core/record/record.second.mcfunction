@@ -19,7 +19,6 @@ execute store result storage txcw:core record.knots[-2].pos.m[2] int 1 run score
 # 先頭の制御ベクトルひとつ前のものと同じ
 data modify storage txcw:core record.knots[-1].m set from storage txcw:core record.knots[-2].m
 
-
 # ひとつ前の制御ベクトルを線分の方向にする
 execute store result score $ txcw run data get storage txcw:core record.knots[-1].rot.p[0]
 execute store result score $$ txcw run data get storage txcw:core record.knots[-2].rot.p[0]
@@ -30,11 +29,6 @@ execute store result score $ txcw run data get storage txcw:core record.knots[-1
 execute store result score $$ txcw run data get storage txcw:core record.knots[-2].rot.p[1]
 scoreboard players operation $ txcw -= $$ txcw
 execute store result storage txcw:core record.knots[-2].rot.m[1] int 1 run scoreboard players operation $ txcw /= $3 txcw
-
-execute store result score $ txcw run data get storage txcw:core record.knots[-1].rot.p[2]
-execute store result score $$ txcw run data get storage txcw:core record.knots[-2].rot.p[2]
-scoreboard players operation $ txcw -= $$ txcw
-execute store result storage txcw:core record.knots[-2].rot.m[2] int 1 run scoreboard players operation $ txcw /= $3 txcw
 
 # 先頭の制御ベクトルひとつ前のものと同じ
 data modify storage txcw:core record.knots[-1].rot.m set from storage txcw:core record.knots[-2].rot.m
