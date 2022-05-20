@@ -1,2 +1,1 @@
-# TxCamera
-Camera Work datapack
+camerawork library

@@ -1,0 +1,8 @@
+{
+  "criteria": {
+    "":{"trigger": "tick"}
+  },
+  "rewards": {
+    "function": "txcw:core/camera/player_tick"
+  }
+}
