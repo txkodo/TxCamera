@@ -12,3 +12,6 @@ execute if data storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].rec
 execute unless data storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].record.knots[2] run function txcw:core/record/calcurate/knotvec.line
 
 data remove storage txcw:core temp.points
+
+# 通過点が2つ未満だった場合エラー
+execute store result storage txcw:core record.success byte 1 if data storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].record.knots[1]

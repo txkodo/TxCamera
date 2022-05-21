@@ -1,10 +1,11 @@
-tellraw @s ["カメラの記録を開始します"]
-
-tellraw @s ["[ 通過点を追加 ]\n/function txcw:api/record/shot"]
-tellraw @s ["[ 記録をテスト ]\n/function txcw:api/record/testplay"]
-
-tellraw @s ["[ 記録を終了し保存 ]\n/function txcw:api/record/end"]
+tellraw @s ["",{"text":"\nStarted Recording!!","color":"gold","hoverEvent":{"action":"show_text","contents":[{"text":"記録を開始しました"}]}}," [",{"text":"Exit","color":"green","underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"保存して終了"}]},"clickEvent":{"action":"run_command","value":"/function txcw:core/ui/check/end"}},{"text":"]"}]
 
 function txcw:api/record/start
-function txcw:core/record/ui/auto/tick
 tag @s add txcw.ui
+function txcw:core/ui/auto/tick
+
+function txcw:core/thread/please/
+data modify storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].ui.speed set value 50
+data modify storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].ui.slot set from entity @s SelectedItemSlot
+
+item replace entity @s hotbar.4 with minecraft:crossbow{txcw:1b,Charged:1b} 1

@@ -49,6 +49,9 @@ scoreboard players set $6 txcw 6
 #declare score_holder $-6
 scoreboard players set $-6 txcw -6
 
+#declare score_holder $10
+scoreboard players set $10 txcw 10
+
 #declare score_holder $36000
 scoreboard players set $36000 txcw 36000
 

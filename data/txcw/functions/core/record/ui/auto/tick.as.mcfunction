@@ -1,1 +1,0 @@
-schedule function txcw:core/record/ui/auto/tick 1 replace

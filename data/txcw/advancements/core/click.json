@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "": {
+      "trigger": "shot_crossbow",
+      "conditions": {
+        "player": {
+          "nbt": "{Tags:[\"txcw.ui\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "txcw:core/ui/auto/__click"
+  }
+}

@@ -1,5 +1,8 @@
 function txcw:core/thread/please/
 function txcw:core/record/calcurate/
-execute unless data storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].record.knots[1] run tellraw @s ["再生するには2つ以上の経由点が必要です"]
-execute if data storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].record.knots[1] run tellraw @s ["テスト再生を開始します"]
-execute if data storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].record.knots[1] run function txcw:core/record/testplay
+
+execute if data storage txcw:core record{success:0b} run tellraw @s ["",{"text":"\nError:","color":"red"},{"text":" failed to export camerawork","hoverEvent":{"action":"show_text","contents":[{"text":"カメラワークの出力に失敗しました"}]}}]
+
+execute if data storage txcw:core record{success:1b} run tellraw @s {"text":"\nStart Testplay","color":"gold","hoverEvent":{"action":"show_text","contents":[{"text":"カメラワークをテスト再生します"}]}}
+
+execute if data storage txcw:core record{success:1b} run function txcw:core/record/testplay

@@ -1,8 +1,11 @@
-tellraw @s ["カメラの記録を終了しました"]
-
-tellraw @s ["[ 記録を保存する ]\n記録データは storage txcw:api record に格納されています\nこのデータは新しい記録によって上書きされてしまため、\n直ちに別のストレージにコピーしてください"]
-
-tellraw @s ["[ 記録を再生する ]\n保存した記録データは以下の方法で再生できます\n 1. 記録データを storage txcw:api play に格納する\n2. /tag @s add txcw.camera を実行しプレイヤーにタグを付与する\n3. /function txcw:api/play を実行する"]
+tellraw @s {"text":"\nExit Recording","color":"gold","hoverEvent":{"action":"show_text","contents":[{"text":"記録を終了しました"}]}}
 
 tag @s remove txcw.ui
 function txcw:api/record/end
+
+execute if data storage txcw:core record{success:1b} run tellraw @s ["",{"text":" successfully exported camerawork","hoverEvent":{"action":"show_text","contents":[{"text":"カメラワークは正常に出力されました"}]}}," [",{"text":"Save","color":"green","underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"カメラワークを保存"}]},"clickEvent":{"action":"suggest_command","value":"/data modify storage <namespace> <path> set from storage txcw:api record"}},{"text":"]\n"}]
+execute if data storage txcw:core record{success:0b} run tellraw @s ["",{"text":"\nError:","color":"red"},{"text":" failed to export camerawork","hoverEvent":{"action":"show_text","contents":[{"text":"カメラワークの出力に失敗しました"}]}}]
+
+clear @s minecraft:crossbow{txcw:1b} 1
+
+title @s actionbar ""
