@@ -29,7 +29,7 @@ Cancel changes
 
 
 
-好きな数だけ通過点を追加したら、チャット欄の**[ TestPlay ]** をクリック
+好きな数だけ通過点を追加したら、チャット欄の **[ TestPlay ]** をクリック
 
 すると記録中のデータが再生される
 
@@ -41,13 +41,13 @@ Cancel changes
 
 ## 2. 記録したデータを保存する
 
-テストプレイに満足したら、チャット欄の**[ Exit ]** をクリック
+テストプレイに満足したら、チャット欄の **[ Exit ]** をクリック
 
 これで記録が終了し保存できるようになる
 
 ※満足しなくても一度終了してもう一度記録しよう
 
-チャット欄の**[ Save ]** をクリックすると
+チャット欄の **[ Save ]** をクリックすると
 
 ```mcfunction
 /data modify storage <namespace> <path> set from storage txcw:api record
