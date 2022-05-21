@@ -71,3 +71,5 @@ data modify storage txcw:core record set value {knots:[]}
 scoreboard objectives add AiMath dummy
 
 function txcw:core/thread/init/
+
+tellraw @a "\nTxCamera successfully installed!"
