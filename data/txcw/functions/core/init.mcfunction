@@ -68,6 +68,8 @@ data modify storage txcw:core bezier set value {3d:{in:{p1:[0,0,0],p2:[0,0,0],p3
 data modify storage txcw:core next set value 0b
 data modify storage txcw:core record set value {knots:[]}
 
+#declare storage txcw:api
+
 scoreboard objectives add AiMath dummy
 
 function txcw:core/thread/init/
