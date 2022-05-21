@@ -1,6 +1,6 @@
 # TxCamera
 カメラワークを記録、再生するデータパック
-
+Cancel changes
 複数のカメラワークの同時記録、同時再生にも対応
 
 ※ 記録と再生合わせ最大512チャンネル
@@ -110,7 +110,7 @@
 
 idは文字列でも数値でもコンパウンドでも任意のデータで構わない
 
-```
+```mcfunction
 /data modify storage txcw:api play set from storage <namespace> <path>
 /data modify storage txcw:api play.id set value <any data>
 ```
@@ -119,7 +119,7 @@ idは文字列でも数値でもコンパウンドでも任意のデータで構
 
 コールバック先で以下のようにに分岐することで特定のカメラワーク終了時にのみ実行するようにできる
 
-```
+```mcfunction
 /execute if data storage txcw:api callback{id:<any data>} run ...
 ```
 
