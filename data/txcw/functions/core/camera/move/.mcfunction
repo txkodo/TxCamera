@@ -15,6 +15,12 @@ execute store result score $t txcw run data get storage txcw:thread tree[-2][-2]
 # ストレージから移動距離を取得
 execute store result score $span txcw run data get storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.speed
 
+# 速度の補間
+data modify storage txcw:core bezier.1d.in set from storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.vel
+function txcw:core/bezier/1d/eval
+data modify entity @s Pos set from storage txcw:core bezier.1d.out.p
+
+
 # 制御点とパラメータを更新
 data modify storage txcw:core bezier.3d set from storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.pos
 function txcw:core/camera/move/update

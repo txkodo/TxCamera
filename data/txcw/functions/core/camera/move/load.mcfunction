@@ -1,7 +1,7 @@
 # データをベジエの制御点に変換する
 data modify storage txcw:core bezier.3d set value {p1:[0,0,0],p2:[0,0,0],p3:[0,0,0],p4:[0,0,0]}
 data modify storage txcw:core bezier.2d set value {p1:[0,0],p2:[0,0],p3:[0,0],p4:[0,0]}
-data modify storage txcw:core bezier.1d set value {p1:0,p2:0,p3:0,p4:0}
+data modify storage txcw:core bezier.1d.in set value {p1:0,p2:0,p3:0,p4:0}
 
 # 位置の制御点
 data modify storage txcw:core bezier.3d.p1 set from storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.knots[0].pos.p
@@ -60,16 +60,16 @@ data modify storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.ro
 
 
 # 速度の制御点
-data modify storage txcw:core bezier.1d.p1 set from storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.knots[0].vel.p
+data modify storage txcw:core bezier.1d.in.p1 set from storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.knots[0].vel.p
 
 execute store result score #1 txcw run data get storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.knots[0].vel.m[0]
 execute store result score #0 txcw run data get storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.knots[0].vel.p[0]
-execute store result storage txcw:core bezier.1d.p2[0] int 1 run scoreboard players operation #0 txcw += #1 txcw
+execute store result storage txcw:core bezier.1d.in.p2[0] int 1 run scoreboard players operation #0 txcw += #1 txcw
 
-data modify storage txcw:core bezier.1d.p4 set from storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.knots[1].vel.p
+data modify storage txcw:core bezier.1d.in.p4 set from storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.knots[1].vel.p
 
 execute store result score #1 txcw run data get storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.knots[1].vel.m[0]
 execute store result score #0 txcw run data get storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.knots[1].vel.p[0]
-execute store result storage txcw:core bezier.1d.p3[0] int 1 run scoreboard players operation #0 txcw -= #1 txcw
+execute store result storage txcw:core bezier.1d.in.p3[0] int 1 run scoreboard players operation #0 txcw -= #1 txcw
 
-data modify storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.vel set from storage txcw:core bezier.1d
+data modify storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.vel set from storage txcw:core bezier.1d.in

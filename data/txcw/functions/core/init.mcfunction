@@ -60,9 +60,13 @@ scoreboard players set $1000 txcw 1000
 
 #declare storage txcw:core
 data modify storage txcw:core active set value {}
-data merge storage txcw:core {version:1,bezier:{3d:{p1:[0,0,0],p2:[0,0,0],p3:[0,0,0],p4:[0,0,0]},1d:{p1:0,p2:0,p3:0,p4:0}}}
-data merge storage txcw:core {next:0b,}
-data merge storage txcw:core {record:{knots:[]}}
+data modify storage txcw:core temp set value {}
+data modify storage txcw:core _ set value 0b
+data modify storage txcw:core record set value {}
+data modify storage txcw:core version set value 1
+data modify storage txcw:core bezier set value {3d:{in:{p1:[0,0,0],p2:[0,0,0],p3:[0,0,0],p4:[0,0,0]}},2d:{in:{p1:[0,0],p2:[0,0],p3:[0,0],p4:[0,0]}},1d:{in:{p1:0,p2:0,p3:0,p4:0}}}
+data modify storage txcw:core next set value 0b
+data modify storage txcw:core record set value {knots:[]}
 
 scoreboard objectives add AiMath dummy
 
