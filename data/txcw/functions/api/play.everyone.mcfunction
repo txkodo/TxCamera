@@ -1,11 +1,11 @@
-#> txcw:api/play.me
+#> txcw:api/play.everyone
 #
 # カメラワークを再生する
 #
-# 実行者のみがカメラに追従する
+# ワールドの全プレイヤーがカメラに追従する
 #
 # @input storage txcw:api play : カメラワークデータ (記録終了時に storage txcw:api record に格納されるもの)
 # @api
 
-tag @s add txcw.camera
+tag @a add txcw.camera
 function txcw:core/camera/play
