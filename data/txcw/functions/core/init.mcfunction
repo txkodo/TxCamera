@@ -72,4 +72,4 @@ scoreboard objectives add AiMath dummy
 
 function txcw:core/thread/init/
 
-tellraw @a "\nTxCamera successfully installed!"
+tellraw @a "\nTxCamera was successfully installed!"
