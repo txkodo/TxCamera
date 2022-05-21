@@ -7,3 +7,5 @@ kill @e[type=area_effect_cloud,tag=tzcw._]
 data modify storage txcw:api point.rot set from entity @s Rotation
 data modify storage txcw:api point.speed set from storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].ui.speed
 function txcw:api/record/addpoint
+
+function txcw:core/ui/auto/tick
