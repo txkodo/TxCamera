@@ -4,7 +4,9 @@ execute store result score $p txcw run function txcw:core/bezier/div
 scoreboard players operation $p_ txcw = $p txcw
 scoreboard players set $ txcw 1000
 scoreboard players operation $ txcw *= $span txcw
+scoreboard players operation $ txcw *= $-1 txcw
 scoreboard players operation $ txcw /= $p txcw
+scoreboard players operation $ txcw *= $-1 txcw
 scoreboard players operation $t txcw += $ txcw
 
 
@@ -13,7 +15,9 @@ scoreboard players operation $p_ txcw += $p txcw
 scoreboard players operation $p_ txcw /= $2 txcw
 scoreboard players set $ txcw 1000
 scoreboard players operation $ txcw *= $span txcw
+scoreboard players operation $ txcw *= $-1 txcw
 scoreboard players operation $ txcw /= $p_ txcw
+scoreboard players operation $ txcw *= $-1 txcw
 scoreboard players operation $t_ txcw += $ txcw
 scoreboard players operation $t txcw = $t_ txcw
 

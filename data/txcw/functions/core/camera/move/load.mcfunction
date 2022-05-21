@@ -60,16 +60,7 @@ data modify storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.ro
 
 
 # 速度の制御点
-data modify storage txcw:core bezier.1d.in.p1 set from storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.knots[0].vel.p
+data modify storage txcw:core linear.1d.in.p1 set from storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.knots[0].vel.p
+data modify storage txcw:core linear.1d.in.p2 set from storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.knots[1].vel.p
 
-execute store result score #1 txcw run data get storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.knots[0].vel.m[0]
-execute store result score #0 txcw run data get storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.knots[0].vel.p[0]
-execute store result storage txcw:core bezier.1d.in.p2[0] int 1 run scoreboard players operation #0 txcw += #1 txcw
-
-data modify storage txcw:core bezier.1d.in.p4 set from storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.knots[1].vel.p
-
-execute store result score #1 txcw run data get storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.knots[1].vel.m[0]
-execute store result score #0 txcw run data get storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.knots[1].vel.p[0]
-execute store result storage txcw:core bezier.1d.in.p3[0] int 1 run scoreboard players operation #0 txcw -= #1 txcw
-
-data modify storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.vel set from storage txcw:core bezier.1d.in
+data modify storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.vel set from storage txcw:core linear.1d.in

@@ -17,4 +17,4 @@ execute store result score $x2 txcw run data get storage txcw:core bezier.1d.in.
 execute store result score $x3 txcw run data get storage txcw:core bezier.1d.in.p3
 execute store result score $x4 txcw run data get storage txcw:core bezier.1d.in.p4
 
-execute store result storage txcw:core bezier.1d.out.p double 1 run function txcw:core/bezier/1d/eval
+execute store result storage txcw:core bezier.1d.out.p int 1 run function txcw:core/bezier/1d

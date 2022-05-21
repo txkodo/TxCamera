@@ -27,10 +27,3 @@ execute store result score $ txcw run data get storage txcw:thread tree[-2][-2][
 execute store result score $$ txcw run data get storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].record.knots[-3].rot.p[1]
 scoreboard players operation $ txcw -= $$ txcw
 execute store result storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].record.knots[-2].rot.m[1] int 1 run scoreboard players operation $ txcw /= $4 txcw
-
-
-# 速度
-execute store result score $ txcw run data get storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].record.knots[-1].vel.p
-execute store result score $$ txcw run data get storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].record.knots[-3].vel.p
-scoreboard players operation $ txcw -= $$ txcw
-execute store result storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].record.knots[-2].vel.m int 1 run scoreboard players operation $ txcw /= $4 txcw
