@@ -35,7 +35,6 @@ function txcw:core/bezier/1d.div
 scoreboard players operation $y txcw *= $y txcw
 scoreboard players operation $m txcw += $y txcw
 
-execute store result storage math: in double 1 run scoreboard players get $m txcw
-function math:sqrt/
-data get storage math: out
-
+scoreboard players operation $sqrt.in txcw = $m txcw
+function txcw:core/util/isqrt/
+scoreboard players get $sqrt.out txcw

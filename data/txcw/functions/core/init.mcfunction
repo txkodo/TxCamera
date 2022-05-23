@@ -20,43 +20,42 @@ scoreboard objectives add txcw dummy
 #declare score_holder $span
 #declare score_holder $speed
 
-#declare score_holder #0
-#declare score_holder #1
-#declare score_holder #2
-#declare score_holder #3
-#declare score_holder #4
-
-#declare score_holder $-1
-scoreboard players set $-1 txcw -1
-
-#declare score_holder $3
-scoreboard players set $3 txcw 3
-#declare score_holder $-3
-scoreboard players set $-3 txcw -3
-
+#declare score_holder $0
+#declare score_holder $1
 #declare score_holder $2
-scoreboard players set $2 txcw 2
-#declare score_holder $-2
-scoreboard players set $-2 txcw -2
+#declare score_holder $3
 
-#declare score_holder $4
-scoreboard players set $4 txcw 4
-#declare score_holder $-4
-scoreboard players set $-4 txcw -4
+#declare score_holder #-1
+scoreboard players set #-1 txcw -1
 
-#declare score_holder $6
-scoreboard players set $6 txcw 6
-#declare score_holder $-6
-scoreboard players set $-6 txcw -6
+#declare score_holder #3
+scoreboard players set #3 txcw 3
+#declare score_holder #-3
+scoreboard players set #-3 txcw -3
 
-#declare score_holder $10
-scoreboard players set $10 txcw 10
+#declare score_holder #2
+scoreboard players set #2 txcw 2
+#declare score_holder #-2
+scoreboard players set #-2 txcw -2
 
-#declare score_holder $36000
-scoreboard players set $36000 txcw 36000
+#declare score_holder #4
+scoreboard players set #4 txcw 4
+#declare score_holder #-4
+scoreboard players set #-4 txcw -4
 
-#declare score_holder $1000
-scoreboard players set $1000 txcw 1000
+#declare score_holder #6
+scoreboard players set #6 txcw 6
+#declare score_holder #-6
+scoreboard players set #-6 txcw -6
+
+#declare score_holder #10
+scoreboard players set #10 txcw 10
+
+#declare score_holder #36000
+scoreboard players set #36000 txcw 36000
+
+#declare score_holder #1000
+scoreboard players set #1000 txcw 1000
 
 #declare storage txcw:core
 data modify storage txcw:core active set value {}

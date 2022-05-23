@@ -8,4 +8,5 @@ function txcw:core/thread/please/
 data modify storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].ui.speed set value 50
 data modify storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].ui.slot set from entity @s SelectedItemSlot
 
+advancement revoke @s only txcw:core/click
 item replace entity @s hotbar.4 with minecraft:crossbow{txcw:1b,Charged:1b} 1

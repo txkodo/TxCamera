@@ -1,15 +1,18 @@
 {
   "criteria": {
     "": {
-      "trigger": "shot_crossbow",
+      "trigger": "inventory_changed",
       "conditions": {
         "player": {
           "nbt": "{Tags:[\"txcw.ui\"]}"
-        }
+        },
+        "items": [
+          {"items": ["crossbow"], "nbt": "{txcw:1b,Charged:0b}"}
+        ]
       }
     }
   },
   "rewards": {
-    "function": "txcw:core/ui/auto/__click"
+    "function": "txcw:core/ui/auto/click"
   }
 }

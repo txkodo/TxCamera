@@ -12,9 +12,6 @@ scoreboard players operation @e[scores={txcw.id=-2147483648..2147483647}] txcw.i
 # ストレージからパラメータを取得
 execute store result score $t txcw run data get storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.t
 
-# ストレージから移動距離を取得
-execute store result score $span txcw run data get storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.speed
-
 # 速度の補間
 data modify storage txcw:core linear.1d.in set from storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.vel
 execute store result score $span txcw run function txcw:core/linear/1d/eval
@@ -23,6 +20,7 @@ execute store result score $span txcw run function txcw:core/linear/1d/eval
 data modify storage txcw:core bezier.3d set from storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.pos
 function txcw:core/camera/move/update
 
+tellraw @a { "score": { "name": "$t","objective": "txcw"}}
 # ストレージにパラメータを保存
 execute store result storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.t int 1 run scoreboard players get $t txcw
 

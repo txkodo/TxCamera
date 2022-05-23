@@ -16,10 +16,11 @@ execute store result score $x1 txcw run data get storage txcw:core linear.1d.in.
 execute store result score $x2 txcw run data get storage txcw:core linear.1d.in.p2
 
 
+
 scoreboard players set $y txcw 1000
 scoreboard players operation $y txcw -= $t txcw
 
 scoreboard players operation $y txcw *= $x1 txcw
 scoreboard players operation $x2 txcw *= $t txcw
 scoreboard players operation $y txcw += $x2 txcw
-execute store result storage txcw:core linear.1d.out.p int 1 run scoreboard players operation $y txcw /= $1000 txcw
+execute store result storage txcw:core linear.1d.out.p int 1 run scoreboard players operation $y txcw /= #1000 txcw
