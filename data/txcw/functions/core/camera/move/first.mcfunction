@@ -8,7 +8,7 @@ data modify storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play se
 function txcw:core/camera/move/load
 
 # 同じidのエンティティを検出
-scoreboard players operation @a[tag=txcw.camera] txcw.id = @s txcw.id
+scoreboard players operation @e[tag=txcw.camera] txcw.id = @s txcw.id
 tag @e[tag=txcw.camera] add txcw.active
 
 # パラメータを0に

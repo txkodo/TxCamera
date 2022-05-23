@@ -12,5 +12,7 @@ execute store result entity @s Rotation[1] float 0.01 run data get storage txcw:
 
 execute at @s run tp @s ~ ~ ~
 
+execute at @s run tp @e[type=!player,tag=txcw.active] ~ ~ ~ ~ ~
+
 # 次tickでも起動する
 schedule function txcw:core/camera/tick/ 1 replace

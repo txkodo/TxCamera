@@ -1,4 +1,4 @@
-#> txcw:api/record/addpoint
+#> txcw:api/record/pushpoint
 #
 # 経由点を追加する
 #

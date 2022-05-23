@@ -19,7 +19,7 @@ tag @a[tag=txcw.active] remove txcw.spectator
 # テストプレイ時はスコアを消さない
 execute if entity @s[tag=!txcw.anchor.test] run scoreboard players reset @e[tag=txcw.active] txcw.id
 
-# テストプレイ時はスコアを消さない
+# テストプレイ時はコールバックしない
 execute if entity @s[tag=!txcw.anchor.test] run function #txcw:callback/on_finished
 execute if entity @s[tag=!txcw.anchor.test] as @a[tag=txcw.active] run function #txcw:callback/on_finished
 
