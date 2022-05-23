@@ -20,7 +20,6 @@ execute store result score $span txcw run function txcw:core/linear/1d/eval
 data modify storage txcw:core bezier.3d set from storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.pos
 function txcw:core/camera/move/update
 
-tellraw @a { "score": { "name": "$t","objective": "txcw"}}
 # ストレージにパラメータを保存
 execute store result storage txcw:thread tree[-2][-2][-2][-2][-2][-2][-2][-2][-2].play.t int 1 run scoreboard players get $t txcw
 
