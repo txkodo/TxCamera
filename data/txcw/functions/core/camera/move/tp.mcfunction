@@ -14,5 +14,8 @@ execute at @s run tp @s ~ ~ ~
 
 execute at @s run tp @e[type=!player,tag=txcw.active] ~ ~ ~ ~ ~
 
+
 # 次tickでも起動する
-schedule function txcw:core/camera/tick/ 1 replace
+execute store result storage txcw:core _ byte 1 if entity @e[tag=!txcw.anchor,tag=txcw.active]
+execute if data storage txcw:core {_:0b} run function txcw:core/camera/move/abort
+execute if data storage txcw:core {_:1b} run schedule function txcw:core/camera/tick/ 1 replace

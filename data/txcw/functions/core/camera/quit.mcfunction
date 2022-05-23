@@ -11,5 +11,7 @@ tag @s remove txcw.creative
 tag @s remove txcw.adventure
 tag @s remove txcw.spectator
 
+scoreboard players reset @s txcw.id
+
 # テストプレイ時はコールバックしない
 execute if entity @s[tag=!txcw.ui] run function #txcw:callback/on_quit_each
