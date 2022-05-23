@@ -62,7 +62,6 @@ data modify storage txcw:core active set value {}
 data modify storage txcw:core temp set value {}
 data modify storage txcw:core _ set value 0b
 data modify storage txcw:core record set value {}
-data modify storage txcw:core version set value 1
 data modify storage txcw:core bezier set value {3d:{in:{p1:[0,0,0],p2:[0,0,0],p3:[0,0,0],p4:[0,0,0]}},2d:{in:{p1:[0,0],p2:[0,0],p3:[0,0],p4:[0,0]}},1d:{in:{p1:0,p2:0,p3:0,p4:0}}}
 data modify storage txcw:core next set value 0b
 data modify storage txcw:core record set value {knots:[]}
@@ -73,4 +72,5 @@ scoreboard objectives add AiMath dummy
 
 function txcw:core/thread/init/
 
-tellraw @a "\nTxCamera was successfully installed!"
+data modify storage txcw:core version set value "1.0.2"
+tellraw @a "\nTxCamera v1.0.2 was successfully installed!"
